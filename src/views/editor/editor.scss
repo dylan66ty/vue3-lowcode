@@ -1,0 +1,78 @@
+.content-wrapper {
+  display: flex;
+  height: calc(100vh - var(--editor-header-height));
+  background-color: #edeff3;
+}
+
+
+.dropdown {
+  &-service {
+    position: fixed;
+    z-index: 1000;
+    padding: 8px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 1px #ddd;
+    transition: opacity .2s linear;
+  }
+
+  &-option {
+    padding: 5px 12px;
+    font-size: 14px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #efefef;
+    }
+  }
+}
+
+.operator-extend{
+  &-popover {
+    position: fixed;
+    top: 0;
+    right: 340px;
+    z-index: 1000;
+    width: 320px;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+  }
+
+  &-body {
+    padding: 10px 20px;
+  }
+}
+
+
+// 拖动相关样式
+.drag-in-canvas-ghost {
+  background-color: #f6f7fe;
+  opacity: .8;
+
+  >.editor-block-item  {
+    outline-style: dashed;
+  }
+
+  .menu-item {
+    border-color: var(--editor-primary);
+    height: var(--editor-slot-height);
+    color: var(--editor-primary);
+
+    span.label {
+      display: none;
+    }
+  }
+  
+}
+
+
+
+
+
+

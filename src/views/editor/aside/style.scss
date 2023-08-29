@@ -1,0 +1,51 @@
+.aside-wrapper {
+  position: relative;
+  display: flex;
+  height: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.aside-tabs {
+  border-right: 1px solid #ddd;
+  width: 70px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.aside-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+
+  &.is-active {
+    color: var(--editor-primary) ;
+  }
+}
+
+.aside-pane {
+  &.is-top {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    z-index: 100;
+  }
+
+  position: relative;
+  overflow-y: scroll;
+  padding:50px 10px 10px;
+  width: 270px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 4px 6px 6px 0 rgb(31 50 88 / 8%);
+  box-sizing: border-box;
+  
+}

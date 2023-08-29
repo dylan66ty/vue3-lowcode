@@ -1,0 +1,28 @@
+.operator-wrapper {
+  box-sizing: border-box;
+  border-left: 1px solid #ddd;
+  width: var(--editor-operator-width);
+  height: 100%;
+  background-color: #fff;
+
+  .el-tabs {
+    border: 0;
+    height: 100%;
+
+
+    &__content {
+      overflow: scroll;
+      height: calc(100% - 39px);
+      box-sizing: border-box;
+    
+    }
+  }
+
+
+  .empty {
+    padding-top: 58px;
+    font-size: 12px;
+    text-align: center;
+    color: rgb(0 0 0 / 60%);
+  }
+}

@@ -1,0 +1,58 @@
+.editor-block-item {
+  position: relative;
+  padding: 3px;
+
+  &.active-parent-layout {
+    outline: 2px dashed #ddd;
+    outline-offset: -2px;
+
+    &::after {
+      content: attr(data-label);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      border-radius: 3px;
+      padding: 3px 5px;
+      font-size: 12px;
+      color: #fff;
+      background-color: var(--editor-primary) ;
+      opacity: .7;
+      line-height: 1;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    cursor: move;
+    z-index: 0;
+  }
+
+  &.is-focus {
+    outline: 2px solid var(--editor-primary) ;
+    outline-offset: -2px;
+
+    &::after {
+      content: attr(data-label);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      border-radius: 3px;
+      padding: 3px 5px;
+      font-size: 12px;
+      color: #fff;
+      background-color: var(--editor-primary) ;
+      cursor:move;
+      line-height: 1;
+    }
+  }
+
+  &.is-drag {
+     &::before {
+      pointer-events: none;
+    }
+  }
+}
