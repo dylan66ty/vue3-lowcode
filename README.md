@@ -18,9 +18,9 @@
 - [x] 保存、预览
 - [x] 画布 schema 导入、导出
 - [x] 嵌套拖拽
-- [] 页面树
-- [] 组件的事件
-- [] 出码 
+- [ ] 页面树
+- [ ] 组件的事件
+- [ ] 出码 
 
 ## 克隆本项目
 ```shell
@@ -56,8 +56,6 @@ pnpm run build
 </p>
 
 <img src="https://dylan66ty.github.io/vue3-lowcode/example.png" />
-
-
 
 
 ## 兼容环境
