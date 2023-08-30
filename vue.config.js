@@ -2,7 +2,7 @@ const { defineConfig } = require('@vue/cli-service')
 const MonacoWebpackPlugin = require('monaco-editor-esm-webpack-plugin')
 
 module.exports = defineConfig({
-  publicPath: './vue3-lowcode',
+  publicPath: '/vue3-lowcode',
   transpileDependencies: true,
   runtimeCompiler: true,
   productionSourceMap: false,
