@@ -1,0 +1,1 @@
+.header-wrapper{position:sticky;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd;padding:0 12px;width:100%;height:var(--editor-header-height);box-sizing:border-box}
