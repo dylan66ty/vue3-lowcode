@@ -2,6 +2,7 @@ const { defineConfig } = require('@vue/cli-service')
 const MonacoWebpackPlugin = require('monaco-editor-esm-webpack-plugin')
 
 module.exports = defineConfig({
+  publicPath: './vue3-lowcode',
   transpileDependencies: true,
   runtimeCompiler: true,
   productionSourceMap: false,
@@ -24,15 +25,6 @@ module.exports = defineConfig({
     client: {
       overlay: {
         runtimeErrors: false
-      }
-    },
-    proxy: {
-      '/demo': {
-        target: 'http://192.168.20.173:9009',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/demo': '/'
-        }
       }
     }
   }
