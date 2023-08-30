@@ -1,0 +1,41 @@
+name: Github Pages Deployment 
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy:
+    name: deploy GH pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2     
+        with:
+          version: 7
+
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: Build
+        run:  pnpm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          commit_message: Update preview
+
