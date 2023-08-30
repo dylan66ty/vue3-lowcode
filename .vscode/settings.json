@@ -1,11 +1,9 @@
 {
-  "cSpell.words": [
-    "deepcopy"
-  ],
+  "cSpell.words": ["deepcopy"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
-  "stylelint.enable": true, 
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"],
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"]
 }

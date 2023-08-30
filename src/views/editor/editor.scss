@@ -4,7 +4,6 @@
   background-color: #edeff3;
 }
 
-
 .dropdown {
   &-service {
     position: fixed;
@@ -26,7 +25,7 @@
   }
 }
 
-.operator-extend{
+.operator-extend {
   &-popover {
     position: fixed;
     top: 0;
@@ -41,7 +40,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:10px;
+    padding: 10px;
   }
 
   &-body {
@@ -49,13 +48,12 @@
   }
 }
 
-
 // 拖动相关样式
 .drag-in-canvas-ghost {
   background-color: #f6f7fe;
   opacity: .8;
 
-  >.editor-block-item  {
+  > .editor-block-item {
     outline-style: dashed;
   }
 
@@ -68,11 +66,4 @@
       display: none;
     }
   }
-  
 }
-
-
-
-
-
-

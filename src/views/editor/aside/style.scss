@@ -27,7 +27,7 @@
   user-select: none;
 
   &.is-active {
-    color: var(--editor-primary) ;
+    color: var(--editor-primary);
   }
 }
 
@@ -41,11 +41,10 @@
 
   position: relative;
   overflow-y: scroll;
-  padding:50px 10px 10px;
+  padding: 50px 10px 10px;
   width: 270px;
   height: 100%;
   background-color: #fff;
   box-shadow: 4px 6px 6px 0 rgb(31 50 88 / 8%);
   box-sizing: border-box;
-  
 }

@@ -1,9 +1,9 @@
-name: Github Pages Deployment 
+name: Github Pages Deployment
 
 on:
   push:
     branches:
-      - "main"
+      - 'main'
 
 jobs:
   deploy:
@@ -19,7 +19,7 @@ jobs:
           node-version: 16
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2     
+        uses: pnpm/action-setup@v2
         with:
           version: 7
 
@@ -27,7 +27,7 @@ jobs:
         run: pnpm i --frozen-lockfile
 
       - name: Build
-        run:  pnpm run build
+        run: pnpm run build
         env:
           NODE_OPTIONS: --max-old-space-size=4096
 
@@ -38,4 +38,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           commit_message: Update preview
-

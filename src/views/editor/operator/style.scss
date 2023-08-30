@@ -9,15 +9,12 @@
     border: 0;
     height: 100%;
 
-
     &__content {
       overflow: scroll;
       height: calc(100% - 39px);
       box-sizing: border-box;
-    
     }
   }
-
 
   .empty {
     padding-top: 58px;

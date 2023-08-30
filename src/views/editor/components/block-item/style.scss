@@ -16,7 +16,7 @@
       padding: 3px 5px;
       font-size: 12px;
       color: #fff;
-      background-color: var(--editor-primary) ;
+      background-color: var(--editor-primary);
       opacity: .7;
       line-height: 1;
     }
@@ -31,7 +31,7 @@
   }
 
   &.is-focus {
-    outline: 2px solid var(--editor-primary) ;
+    outline: 2px solid var(--editor-primary);
     outline-offset: -2px;
 
     &::after {
@@ -44,14 +44,14 @@
       padding: 3px 5px;
       font-size: 12px;
       color: #fff;
-      background-color: var(--editor-primary) ;
-      cursor:move;
+      background-color: var(--editor-primary);
+      cursor: move;
       line-height: 1;
     }
   }
 
   &.is-drag {
-     &::before {
+    &::before {
       pointer-events: none;
     }
   }
