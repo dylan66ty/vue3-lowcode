@@ -1,8 +1,4 @@
-export const createModel = (
-  label: string,
-  modelBindField: string,
-  modelInputField = 'modelValue'
-) => {
+export const createModel = (label: string, modelBindField: string, modelInputField = 'modelValue') => {
   return {
     label,
     modelBindField,

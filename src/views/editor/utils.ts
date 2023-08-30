@@ -167,10 +167,7 @@ export const findFocusBlockDataParentList = (blocksData: BlockData[]) => {
   return parentList
 }
 
-export const traverseBlocksDataByVisitor = (
-  blocksData: BlockData[],
-  visitor: (blockData: BlockData) => void
-) => {
+export const traverseBlocksDataByVisitor = (blocksData: BlockData[], visitor: (blockData: BlockData) => void) => {
   const traverse = (blocksData: BlockData[]) => {
     blocksData.forEach((block) => {
       visitor(block)

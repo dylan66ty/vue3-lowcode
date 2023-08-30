@@ -1,9 +1,4 @@
-import {
-  createStyleLayoutProp,
-  createSelectProp,
-  createInputProp,
-  createSwitchProp
-} from './createProp'
+import { createStyleLayoutProp, createSelectProp, createInputProp, createSwitchProp } from './createProp'
 
 export const genStyleProp = () => {
   return {

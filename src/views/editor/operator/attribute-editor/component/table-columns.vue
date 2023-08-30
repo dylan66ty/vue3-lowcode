@@ -33,9 +33,7 @@
       }
 
       const handleAddColumn = () => {
-        columnsCopy.value.push(
-          Object.assign({}, getBaseColumn(), { prop: `prop${columnsCopy.value.length}` })
-        )
+        columnsCopy.value.push(Object.assign({}, getBaseColumn(), { prop: `prop${columnsCopy.value.length}` }))
         onChange()
       }
 
@@ -111,13 +109,7 @@
 
 <template>
   <div class="table-columns-setting">
-    <Draggable
-      v-model="columnsCopy"
-      animation="150"
-      item-key="index"
-      handle=".column-move-handle"
-      @end="onChange"
-    >
+    <Draggable v-model="columnsCopy" animation="150" item-key="index" handle=".column-move-handle" @end="onChange">
       <template #item="{ element: column, index }">
         <div class="flex items-center gap-x-2 mb-3 last:mb-0">
           <div

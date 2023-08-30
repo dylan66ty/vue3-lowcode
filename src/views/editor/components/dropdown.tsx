@@ -1,15 +1,6 @@
 import { ElIcon } from 'element-plus'
 import type { RenderFunction, StyleValue, VNode } from 'vue'
-import {
-  createVNode,
-  ref,
-  defineComponent,
-  onMounted,
-  onUnmounted,
-  reactive,
-  render,
-  computed
-} from 'vue'
+import { createVNode, ref, defineComponent, onMounted, onUnmounted, reactive, render, computed } from 'vue'
 
 interface DropdownOptions {
   content?: RenderFunction | Array<Record<string, any>>

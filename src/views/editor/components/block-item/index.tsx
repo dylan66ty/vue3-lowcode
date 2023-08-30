@@ -42,11 +42,7 @@ export default defineComponent({
         props.editable && props.blockData.focus && 'is-focus',
         props.editable && isDrag.value && 'is-drag',
         props.editable && isParentContainer.value && 'active-parent-layout',
-        props.editable &&
-          isDrag.value &&
-          isContainerBlock.value &&
-          !isCurrentBlockChild.value &&
-          'active-parent-layout'
+        props.editable && isDrag.value && isContainerBlock.value && !isCurrentBlockChild.value && 'active-parent-layout'
       ]
       return _cls
     })

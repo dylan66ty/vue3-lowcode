@@ -39,20 +39,12 @@
         <el-skeleton :rows="5" animated />
       </div>
       <div class="p-4 pt-0">
-        <el-button type="primary" size="small" :icon="Edit" @click="handleItem('editor', key)"
-          >编辑</el-button
-        >
-        <el-button type="success" size="small" :icon="Position" @click="handleItem('preview', key)"
-          >预览</el-button
-        >
-        <el-button type="danger" size="small" :icon="Delete" @click="handleCancel(key)"
-          >删除</el-button
-        >
+        <el-button type="primary" size="small" :icon="Edit" @click="handleItem('editor', key)">编辑</el-button>
+        <el-button type="success" size="small" :icon="Position" @click="handleItem('preview', key)">预览</el-button>
+        <el-button type="danger" size="small" :icon="Delete" @click="handleCancel(key)">删除</el-button>
       </div>
       <div class="absolute right-2 top-2 text-sm text-gray-500">{{ getItemTitle(item) }}</div>
-      <div class="absolute top-0 left-0 w-5 h-5 text-sm text-white bg-blue-500 text-center">{{
-        index + 1
-      }}</div>
+      <div class="absolute top-0 left-0 w-5 h-5 text-sm text-white bg-blue-500 text-center">{{ index + 1 }}</div>
     </div>
   </div>
   <el-empty v-else description="暂无历史记录">

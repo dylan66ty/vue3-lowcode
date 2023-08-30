@@ -2,13 +2,7 @@ import type { RegisterConfig } from '../../../types'
 import StyleWrapper from '../../style-wrapper'
 import { genStyleProp, genSizeProp } from '../../common'
 import { createModel } from '../../createModel'
-import {
-  createColorProp,
-  createInputProp,
-  createSwitchProp,
-  createTableColumnsProp,
-  createTableDataProp
-} from '../../createProp'
+import { createColorProp, createInputProp, createSwitchProp, createTableColumnsProp, createTableDataProp } from '../../createProp'
 import RenderDraggableSlot from '../../../components/render-draggable-slot.vue'
 import RenderPreviewSlot from '../../../components/render-preview-slot'
 import { createSlotItem } from '../../../utils'
@@ -115,9 +109,7 @@ export const registerTable = (registerConfig: RegisterConfig) => {
         if (column.slot) {
           const slotKey = column.prop
           if (!editable) {
-            return (
-              <RenderPreviewSlot slotData={slots[slotKey]} formData={formData} scoped={scoped} />
-            )
+            return <RenderPreviewSlot slotData={slots[slotKey]} formData={formData} scoped={scoped} />
           }
 
           if (slots[slotKey]) {

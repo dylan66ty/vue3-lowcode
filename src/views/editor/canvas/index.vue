@@ -52,19 +52,9 @@
         }
       ]"
     >
-      <div
-        class="fake-body bg-white overflow-scroll p-2 h-full"
-        :style="canvasStyle"
-        @mousedown="onMousedown"
-      >
-        <DraggableGroup
-          v-model="editorData.blocks"
-          item-key="_id"
-          ghost-class="drag-in-canvas-ghost"
-        >
-          <template #default="{ element }">
-            <BlockItem :key="element.key" :block-data="element"
-          /></template>
+      <div class="fake-body bg-white overflow-scroll p-2 h-full" :style="canvasStyle" @mousedown="onMousedown">
+        <DraggableGroup v-model="editorData.blocks" item-key="_id" ghost-class="drag-in-canvas-ghost">
+          <template #default="{ element }"> <BlockItem :key="element.key" :block-data="element" /></template>
         </DraggableGroup>
       </div>
     </div>

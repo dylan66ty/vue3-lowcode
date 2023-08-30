@@ -1,11 +1,5 @@
 import type { RegisterConfig } from '../../types'
-import {
-  createInputProp,
-  createSelectProp,
-  createSwitchProp,
-  createColorProp,
-  createRadioProp
-} from '../createProp'
+import { createInputProp, createSelectProp, createSwitchProp, createColorProp, createRadioProp } from '../createProp'
 import StyleWrapper from '../style-wrapper'
 import { genStyleProp } from '../common'
 import { extractComponentProps, events } from '../../utils'

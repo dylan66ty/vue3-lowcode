@@ -30,10 +30,7 @@ export const storage: {
   }
 }
 
-export const findLastIndex = <T>(
-  arr: T[],
-  callback: (item?: T, index?: number, origin?: T[]) => boolean
-): number => {
+export const findLastIndex = <T>(arr: T[], callback: (item?: T, index?: number, origin?: T[]) => boolean): number => {
   let index = -1
   for (let i = arr.length - 1; i >= 0; i--) {
     if (callback(arr[i], i, arr)) {

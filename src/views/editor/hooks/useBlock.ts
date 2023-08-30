@@ -10,10 +10,7 @@ import { clearBlocksDataFocus, traverseBlocksDataByVisitor, events } from '../ut
 import { $dropdown } from '../components/dropdown'
 import { $dialog } from '../components/dialog'
 
-export const useBlock = (
-  editorData: WritableComputedRef<EditorData>,
-  commands: Record<CommandName, (...args: any[]) => void>
-) => {
+export const useBlock = (editorData: WritableComputedRef<EditorData>, commands: Record<CommandName, (...args: any[]) => void>) => {
   const currentBlock = ref<BlockData>()
   const focusCurrentBlock = (block?: BlockData) => {
     if (!block) {

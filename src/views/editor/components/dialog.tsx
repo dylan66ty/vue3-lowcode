@@ -49,11 +49,7 @@ const DialogComponent = defineComponent({
             default:
               state.options.default ||
               (() => (
-                <MonacoEditor
-                  language={state.options.language}
-                  code={state.options.content}
-                  onChange={(val: string) => (state.options.code = val)}
-                />
+                <MonacoEditor language={state.options.language} code={state.options.content} onChange={(val: string) => (state.options.code = val)} />
               )),
             footer: () =>
               state.options.footer && (

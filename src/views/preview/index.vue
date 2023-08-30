@@ -31,12 +31,6 @@
 
 <template>
   <div class="h-[100vh] w-full" :style="editorData.container.style">
-    <BlockItem
-      v-for="(blockData, index) in editorData.blocks"
-      :key="index"
-      :block-data="blockData"
-      :form-data="formData"
-      :editable="false"
-    />
+    <BlockItem v-for="(blockData, index) in editorData.blocks" :key="index" :block-data="blockData" :form-data="formData" :editable="false" />
   </div>
 </template>

@@ -60,12 +60,7 @@ export default defineComponent({
         <div class="operator-wrapper max-xl:hidden">
           <el-tabs type="border-card">
             <el-tab-pane label="属性">
-              <AttributeEditor
-                key={editorBlock.value?._id}
-                component={component}
-                editorBlock={editorBlock.value}
-                apply={applyBlock}
-              />
+              <AttributeEditor key={editorBlock.value?._id} component={component} editorBlock={editorBlock.value} apply={applyBlock} />
             </el-tab-pane>
             <el-tab-pane label="事件">TODO</el-tab-pane>
           </el-tabs>

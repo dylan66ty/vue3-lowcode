@@ -66,13 +66,4 @@ export interface RegisterConfig {
   register: (component: ComponentData) => void
 }
 
-export type CommandName =
-  | 'drag'
-  | 'delete'
-  | 'redo'
-  | 'undo'
-  | 'clear'
-  | 'updateBlock'
-  | 'updatePage'
-  | 'insetBlock'
-  | 'updateContainer'
+export type CommandName = 'drag' | 'delete' | 'redo' | 'undo' | 'clear' | 'updateBlock' | 'updatePage' | 'insetBlock' | 'updateContainer'

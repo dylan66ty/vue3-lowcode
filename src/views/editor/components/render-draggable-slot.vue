@@ -28,10 +28,7 @@
 <template>
   <DraggableGroup
     v-model="slotData$.children"
-    :class="[
-      'slot-items',
-      { 'has-slot': slotData$.children.length, 'empty-slot': !slotData$.children.length }
-    ]"
+    :class="['slot-items', { 'has-slot': slotData$.children.length, 'empty-slot': !slotData$.children.length }]"
     item-key="_id"
     ghost-class="drag-in-canvas-ghost"
     :data-slot="slotData$.label"

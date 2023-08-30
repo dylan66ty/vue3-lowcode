@@ -47,17 +47,10 @@ const PopoverComponent = defineComponent({
 
     return () => {
       return (
-        <div
-          class="operator-extend-popover shadow-md shadow-gray-300"
-          ref={popoverRef}
-          v-show={state.visible}
-        >
+        <div class="operator-extend-popover shadow-md shadow-gray-300" ref={popoverRef} v-show={state.visible}>
           <div class="flex justify-between p-4">
             <div></div>
-            <div
-              class="w-6 h-6 flex items-center justify-center cursor-pointer hover:bg-gray-100 active:bg-gray-200"
-              onClick={close}
-            >
+            <div class="w-6 h-6 flex items-center justify-center cursor-pointer hover:bg-gray-100 active:bg-gray-200" onClick={close}>
               <ElIcon>
                 <Close />
               </ElIcon>

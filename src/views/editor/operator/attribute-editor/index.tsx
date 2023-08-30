@@ -30,9 +30,7 @@ export default defineComponent({
       if (props.component && props.component.props) {
         Object.entries(props.component.props).map(([propName, config]) => {
           content.push(
-            <el-form-item label={config.label}>
-              {renderPropsMap[config.type]({ propName, config, model: props.editorBlock, update })}
-            </el-form-item>
+            <el-form-item label={config.label}>{renderPropsMap[config.type]({ propName, config, model: props.editorBlock, update })}</el-form-item>
           )
         })
       }
@@ -51,9 +49,7 @@ export default defineComponent({
       if (props.component && props.component.style) {
         Object.entries(props.component.style).map(([propName, config]) => {
           content.push(
-            <el-form-item label={config.label}>
-              {renderStyleMap[config.type]({ propName, config, model: props.editorBlock, update })}
-            </el-form-item>
+            <el-form-item label={config.label}>{renderStyleMap[config.type]({ propName, config, model: props.editorBlock, update })}</el-form-item>
           )
         })
       }

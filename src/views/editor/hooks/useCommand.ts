@@ -1,13 +1,7 @@
 import deepcopy from 'deepcopy'
 import { onUnmounted } from 'vue'
 import type { WritableComputedRef } from 'vue'
-import {
-  events,
-  filterBlocksDataByFocus,
-  traverseBlocksDataByVisitor,
-  findFocusBlockDataParentList,
-  clearBlocksDataFocus
-} from '../utils'
+import { events, filterBlocksDataByFocus, traverseBlocksDataByVisitor, findFocusBlockDataParentList, clearBlocksDataFocus } from '../utils'
 import type { EditorData, CommandName, BlockData } from '../types'
 
 interface ExecuteReturn {

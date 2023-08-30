@@ -1,16 +1,7 @@
 import { defineComponent, inject } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 
-import {
-  Document,
-  List,
-  Delete,
-  Download,
-  Upload,
-  RefreshRight,
-  RefreshLeft,
-  Position
-} from '@element-plus/icons-vue'
+import { Document, List, Delete, Download, Upload, RefreshRight, RefreshLeft, Position } from '@element-plus/icons-vue'
 import { editorInjectionKey } from '../context'
 import { $dialog } from '../components/dialog'
 
@@ -126,10 +117,7 @@ export default defineComponent({
                 editorContext.editorData.container.title = title
               }
 
-              pageSave.save(
-                router.currentRoute.value.query.saveId as string,
-                editorContext?.editorData
-              )
+              pageSave.save(router.currentRoute.value.query.saveId as string, editorContext?.editorData)
 
               ElMessage.success('已保存到本地')
             })

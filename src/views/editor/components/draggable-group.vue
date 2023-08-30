@@ -93,10 +93,7 @@
     @end="onDragend"
   >
     <template #item="item">
-      <div
-        :class="['drag-item', { 'not-draggable': !item.element.draggable }]"
-        :data-label="item.element.label"
-      >
+      <div :class="['drag-item', { 'not-draggable': !item.element.draggable }]" :data-label="item.element.label">
         <slot v-bind="item"> </slot>
       </div>
     </template>

@@ -11,9 +11,7 @@
     },
     setup() {
       const { editorContext } = useEditorContext()
-      const components = computed(() =>
-        editorContext?.componentList?.filter((component) => component.key.startsWith('base:'))
-      )
+      const components = computed(() => editorContext?.componentList?.filter((component) => component.key.startsWith('base:')))
       const clone = (component: ComponentData) => {
         return createBlockData(component)
       }
@@ -28,12 +26,6 @@
 
 <template>
   <div class="flex flex-wrap gap-2">
-    <MenuItem
-      v-for="(component, index) in components"
-      :key="index"
-      class="w-[48%]"
-      :clone="clone"
-      :component="component"
-    ></MenuItem>
+    <MenuItem v-for="(component, index) in components" :key="index" class="w-[48%]" :clone="clone" :component="component"></MenuItem>
   </div>
 </template>

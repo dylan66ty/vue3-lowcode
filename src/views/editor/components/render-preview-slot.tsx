@@ -23,12 +23,7 @@ export default defineComponent({
       return (
         <>
           {props.slotData.children.map((blockData: BlockData) => (
-            <BlockItem
-              blockData={blockData}
-              formData={props.formData}
-              editable={false}
-              scoped={props.scoped}
-            />
+            <BlockItem blockData={blockData} formData={props.formData} editable={false} scoped={props.scoped} />
           ))}
         </>
       )

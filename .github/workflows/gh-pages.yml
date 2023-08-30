@@ -28,8 +28,6 @@ jobs:
 
       - name: Build
         run: pnpm run build
-        env:
-          NODE_OPTIONS: --max-old-space-size=4096
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
