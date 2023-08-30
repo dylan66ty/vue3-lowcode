@@ -11,7 +11,7 @@
   const { back } = useRouter()
 
   const handleItem = (type: 'editor' | 'preview', key: any) => {
-    linkTo(`http://${location.host}/${type}?saveId=${key}`)
+    linkTo(`http://${location.host}/vue3-lowcode/#/${type}?saveId=${key}`)
   }
 
   const handleCancel = async (key: any) => {

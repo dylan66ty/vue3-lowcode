@@ -11,7 +11,7 @@ import { clearBlocksDataFocus } from '../utils'
 import type { EditorData } from '../types'
 
 import Header from '@/components/header.vue'
-import { linkTo, parseQuery, params2query } from '@/utils/helper'
+import { linkTo } from '@/utils/helper'
 
 import { pageSave } from '@/utils/page-save'
 import router from '@/router'
@@ -133,11 +133,16 @@ export default defineComponent({
           pageSave.save(saveId, editorContext?.editorData)
           ElMessage.success({
             message: '已保存到本地',
-            duration: 800
+            duration: 1000
           })
           setTimeout(() => {
-            linkTo(`http://${location.host}/preview?saveId=${saveId}`)
-          }, 900)
+            router.push({
+              path: '/preview',
+              query: {
+                saveId
+              }
+            })
+          }, 1000)
         }
       },
       {
@@ -145,7 +150,9 @@ export default defineComponent({
         value: 'clear',
         icon: <List />,
         handler(_e: MouseEvent) {
-          linkTo(`http://${location.host}/record`)
+          router.push({
+            path: '/record'
+          })
         }
       },
       {
@@ -153,9 +160,7 @@ export default defineComponent({
         value: 'new',
         icon: <Document />,
         handler(_e: MouseEvent) {
-          const params = parseQuery(location.href)
-          delete params.saveId
-          linkTo(`http://${location.host}/editor?${params2query(params)}`)
+          linkTo(`http://${location.host}/vue3-lowcode/#/editor`)
         }
       }
     ]
