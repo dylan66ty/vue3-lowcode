@@ -40,8 +40,9 @@ export const registerTable = (registerConfig: RegisterConfig) => {
     draggable: true,
     props: {
       columns: createTableColumnsProp('列配置', [
-        { label: '标题1', prop: 'title1', slot: true },
-        { label: '标题2', prop: 'title2', slot: true }
+        { label: 'Name', prop: 'name' },
+        { label: 'Age', prop: 'age' },
+        { label: 'Address', prop: 'address' }
       ]),
       data: createTableDataProp('表格数据', [{}]),
       headerBackgroundColor: createColorProp('表头背景颜色', '#f0f0f0'),
